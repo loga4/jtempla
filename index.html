@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="examples.js"></script>
+    <script src="jtempla.js"></script>
+</head>
+<style>
+    #tpl, #out {
+        width:100%;
+        height: 200px;
+    }
+</style>
+<body>
+
+<textarea id="tpl"></textarea>
+
+<div id="out"></div>
+
+<script>
+    var template    = Datas.getTemplate(3);
+    var data        = Datas.getData(0);
+    var ret         = Template.getTpl(template,data);
+
+    document.write(ret)
+
+    g('tpl').innerHTML = template;
+    g('out').innerHTML = ret;
+
+    function g(id){
+        return document.getElementById(id);
+    }
+</script>
+
+
+</body>
+</html>
